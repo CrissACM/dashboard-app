@@ -1,22 +1,30 @@
+import { router } from 'expo-router';
 import { Avatar } from '../common/Avatar';
-import { Card } from '../common/Card';
-import { ThemedText } from '../ThemedText';
+import { ThemedButton } from '../common/ThemedButton';
+import { ThemedCard } from '../common/ThemedCard';
+import { ThemedView } from '../common/ThemedView';
 
 interface ProfileHeaderCardProps {
-  name?: string;
   avatarUrl?: string;
+  id: string;
 }
 
-export function ProfileHeaderCard({
-  name = 'User Name',
-  avatarUrl,
-}: ProfileHeaderCardProps) {
+export function ProfileHeaderCard({ avatarUrl, id }: ProfileHeaderCardProps) {
   return (
-    <Card className='items-center px-0 mb-5 bg-transparent border-0'>
-      <Avatar source={avatarUrl} size={100} showStatus={true} />
-      <ThemedText className='mt-3 text-xl font-semibold text-white'>
-        {name}
-      </ThemedText>
-    </Card>
+    <ThemedCard className='items-center px-0 mb-2 bg-transparent border-0'>
+      <Avatar source={avatarUrl} size={100} />
+
+      <ThemedView className='items-center w-full mt-6'>
+        <ThemedView className='flex-row justify-between w-full'>
+          <ThemedButton
+            className='flex-1 w-full'
+            color='tertiary'
+            onPress={() => router.push(`/profile/data/${id}`)}
+          >
+            Data
+          </ThemedButton>
+        </ThemedView>
+      </ThemedView>
+    </ThemedCard>
   );
 }

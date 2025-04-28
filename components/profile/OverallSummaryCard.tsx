@@ -1,7 +1,7 @@
 import { UserCognitiveProfile } from '../../data/mockUsers'; // Importar el tipo
-import { Card } from '../common/Card';
-import { ThemedText } from '../ThemedText';
-import { ThemedView } from '../ThemedView';
+import { ThemedCard } from '../common/ThemedCard';
+import { ThemedText } from '../common/ThemedText';
+import { ThemedView } from '../common/ThemedView';
 
 // Componente auxiliar para mostrar tendencia con color
 
@@ -9,15 +9,16 @@ interface OverallSummaryCardProps {
   user: UserCognitiveProfile;
 }
 
-const TrendIndicator: React.FC<{
-  trend: 'improving' | 'stable' | 'declining';
-}> = ({ trend }) => {
+type Trend = 'improving' | 'stable' | 'declining';
+
+const TrendIndicator = ({ trend }: { trend: Trend }) => {
   const color =
     trend === 'improving'
       ? 'text-green-400'
       : trend === 'declining'
       ? 'text-red-400'
       : 'text-yellow-400';
+
   const text = trend.charAt(0).toUpperCase() + trend.slice(1);
   return <ThemedText className={`font-semibold ${color}`}>{text}</ThemedText>;
 };
@@ -26,7 +27,7 @@ export function OverallSummaryCard({ user }: OverallSummaryCardProps) {
   const lastActiveDate = new Date(user.lastActive).toLocaleDateString();
 
   return (
-    <Card>
+    <ThemedCard>
       <ThemedText className='mb-3 text-lg font-semibold text-white'>
         Resumen General
       </ThemedText>
@@ -52,6 +53,6 @@ export function OverallSummaryCard({ user }: OverallSummaryCardProps) {
           {lastActiveDate}
         </ThemedText>
       </ThemedView>
-    </Card>
+    </ThemedCard>
   );
 }

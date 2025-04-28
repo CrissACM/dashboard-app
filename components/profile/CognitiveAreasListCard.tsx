@@ -1,17 +1,15 @@
 import { UserCognitiveProfile } from '../../data/mockUsers';
-import { Card } from '../common/Card';
-import { ThemedText } from '../ThemedText';
-import { ThemedView } from '../ThemedView';
+import { ThemedCard } from '../common/ThemedCard';
+import { ThemedText } from '../common/ThemedText';
+import { ThemedView } from '../common/ThemedView';
 
-enum Trend {
-  Improving = 'improving',
-  Stable = 'stable',
-  Declining = 'declining',
+interface CognitiveAreasListCardProps {
+  user: UserCognitiveProfile;
 }
-// Reutilizamos el TrendIndicator de OverallSummaryCard o lo movemos a common/
-const TrendIndicatorMini: React.FC<{
-  trend: 'improving' | 'stable' | 'declining';
-}> = ({ trend }) => {
+
+type Trend = 'improving' | 'stable' | 'declining';
+
+const TrendIndicatorMini = ({ trend }: { trend: Trend }) => {
   const color =
     trend === 'improving'
       ? 'text-green-500'
@@ -22,13 +20,9 @@ const TrendIndicatorMini: React.FC<{
   return <ThemedText className={`font-bold ${color}`}>{icon}</ThemedText>;
 };
 
-interface CognitiveAreasListCardProps {
-  user: UserCognitiveProfile;
-}
-
 export function CognitiveAreasListCard({ user }: CognitiveAreasListCardProps) {
   return (
-    <Card>
+    <ThemedCard>
       <ThemedText className='mb-3 text-lg font-semibold text-white'>
         Áreas Cognitivas
       </ThemedText>
@@ -51,6 +45,6 @@ export function CognitiveAreasListCard({ user }: CognitiveAreasListCardProps) {
           No hay datos de áreas cognitivas.
         </ThemedText>
       )}
-    </Card>
+    </ThemedCard>
   );
 }

@@ -1,8 +1,8 @@
 import { Dimensions } from 'react-native';
 import { ProgressChart } from 'react-native-chart-kit';
 import { UserCognitiveProfile } from '../../data/mockUsers';
-import { Card } from '../common/Card';
-import { ThemedText } from '../ThemedText';
+import { ThemedCard } from '../common/ThemedCard';
+import { ThemedText } from '../common/ThemedText';
 
 // Obtener el ancho de la pantalla para hacer el gráfico responsive
 // Restaremos el padding de la ScrollView (px-4 -> 16*2=32) y el espacio entre cards (gap-4 -> 16 / 2 = 8 approx por lado)
@@ -37,8 +37,7 @@ export function OverallTrendGraphCard({ user }: OverallTrendGraphCardProps) {
   };
 
   return (
-    <Card className='items-center flex-1 py-3 mr-1'>
-      {' '}
+    <ThemedCard className='items-center flex-1 py-3 mr-1'>
       {/* flex-1 y mr-1 para layout */}
       <ThemedText className='mb-2 font-semibold text-center text-white'>
         Puntuación Global
@@ -56,6 +55,6 @@ export function OverallTrendGraphCard({ user }: OverallTrendGraphCardProps) {
       <ThemedText className='mt-2 text-xl font-bold text-white'>
         {user.overallScore}%
       </ThemedText>
-    </Card>
+    </ThemedCard>
   );
 }

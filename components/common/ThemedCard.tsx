@@ -1,11 +1,11 @@
 import { ViewProps } from 'react-native';
-import { ThemedView } from '../ThemedView';
+import { ThemedView } from './ThemedView';
 
 interface CardProps extends ViewProps {
   children: React.ReactNode;
 }
 
-export function Card({ children, className, ...props }: CardProps) {
+export function ThemedCard({ children, className, ...props }: CardProps) {
   return (
     <ThemedView
       className={`bg-zinc-800 rounded-lg p-4 border border-zinc-700 ${

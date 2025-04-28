@@ -1,6 +1,7 @@
+import { Ionicons } from '@expo/vector-icons';
 import { Image, ImageSourcePropType } from 'react-native';
-import { ThemedView } from '../ThemedView';
 import { StatusDot } from './StatusDot';
+import { ThemedView } from './ThemedView';
 
 interface AvatarProps {
   source?: ImageSourcePropType | string;
@@ -29,13 +30,18 @@ export function Avatar({
           resizeMode='cover'
         />
       ) : (
-        <ThemedView
+        <Ionicons
           className={`rounded-full bg-zinc-600 ${imageSizeClass}`}
+          size={size}
+          name='person-circle-outline'
+          color='white'
           style={{ width: size, height: size }}
         />
       )}
       {showStatus && (
-        <ThemedView className={`absolute bottom-0 right-0 ${statusPosition}`}>
+        <ThemedView
+          className={`absolute bottom-0 rounded-full right-0 ${statusPosition}`}
+        >
           <StatusDot color={statusColor} size={size / 5} />
         </ThemedView>
       )}

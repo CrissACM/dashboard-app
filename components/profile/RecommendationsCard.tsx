@@ -1,8 +1,8 @@
 import { UserCognitiveProfile } from '../../data/mockUsers';
-import { Card } from '../common/Card';
 import { TagButton } from '../common/TagButton';
-import { ThemedText } from '../ThemedText';
-import { ThemedView } from '../ThemedView';
+import { ThemedCard } from '../common/ThemedCard';
+import { ThemedText } from '../common/ThemedText';
+import { ThemedView } from '../common/ThemedView';
 
 // Mapeo simple de ID a Nombre (puedes hacerlo más robusto)
 const areaIdToName = (id: string): string => {
@@ -30,7 +30,7 @@ export function RecommendationsCard({ user }: RecommendationsCardProps) {
   }
 
   return (
-    <Card>
+    <ThemedCard>
       <ThemedText className='mb-3 text-lg font-semibold text-white'>
         Áreas Recomendadas
       </ThemedText>
@@ -43,6 +43,6 @@ export function RecommendationsCard({ user }: RecommendationsCardProps) {
           />
         ))}
       </ThemedView>
-    </Card>
+    </ThemedCard>
   );
 }

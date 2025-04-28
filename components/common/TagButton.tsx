@@ -1,5 +1,5 @@
 import { Pressable, type PressableProps } from 'react-native';
-import { ThemedText } from '../ThemedText';
+import { ThemedText } from './ThemedText';
 
 interface TagButtonProps extends PressableProps {
   label: string;

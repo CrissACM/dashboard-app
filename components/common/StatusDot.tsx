@@ -1,4 +1,4 @@
-import { ThemedView } from '../ThemedView';
+import { View } from 'react-native';
 
 interface StatusDotProps {
   color?: string;
@@ -12,7 +12,7 @@ export function StatusDot({
   const sizeClass = `w-${size / 4} h-${size / 4}`;
 
   return (
-    <ThemedView
+    <View
       className={`rounded-full border-2 border-zinc-800 ${color} ${sizeClass}`}
       style={{ width: size, height: size }}
     />

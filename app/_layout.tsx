@@ -66,7 +66,7 @@ export default function RootLayout() {
         >
           <Stack.Screen name='home/index' options={{ title: 'User' }} />
           <Stack.Screen name='profile/[id]' options={{ title: 'Profile' }} />
-          <Stack.Screen name='data/index' options={{ title: 'Data' }} />
+          <Stack.Screen name='profile/data/[id]' options={{ title: 'Data' }} />
           <Stack.Screen name='stats/index' options={{ title: 'Stats' }} />
           <Stack.Screen name='+not-found' />
         </Stack>

@@ -1,4 +1,4 @@
-import { ThemedView } from '@/components/ThemedView';
+import { ThemedView } from '@/components/common/ThemedView';
 import { UserListItem } from '@/components/UserListItem';
 import { mockUsersData } from '@/data/mockUsers';
 import { FlatList } from 'react-native';

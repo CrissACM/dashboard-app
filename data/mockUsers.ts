@@ -1,4 +1,4 @@
-interface CognitiveAreaScore {
+export interface CognitiveAreaScore {
   id: 'memory' | 'attention' | 'speed' | 'logic' | 'language' | 'spatial';
   name: string;
   score: number;
