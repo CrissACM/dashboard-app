@@ -21,7 +21,7 @@ export function ProfileHeaderCard({ avatarUrl, id }: ProfileHeaderCardProps) {
             color='tertiary'
             onPress={() => router.push(`/profile/data/${id}`)}
           >
-            Data
+            Información
           </ThemedButton>
         </ThemedView>
       </ThemedView>

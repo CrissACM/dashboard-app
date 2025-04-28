@@ -59,7 +59,7 @@ export function OverallProgressCard({ user }: OverallProgressCardProps) {
     <ThemedCard>
       <ThemedView className='flex-row items-start justify-between'>
         <ThemedView className='items-center w-1/2 pr-2'>
-          <ThemedText className='mb-2 font-semibold text-white'>
+          <ThemedText className='my-2 font-semibold text-white'>
             Progreso General
           </ThemedText>
 
@@ -87,7 +87,7 @@ export function OverallProgressCard({ user }: OverallProgressCardProps) {
         </ThemedView>
 
         <ThemedView className='items-end w-1/2 pt-8 pl-2'>
-          <ThemedText className='mb-1 text-2xl font-bold text-white'>
+          <ThemedText className='my-2 text-2xl font-bold text-white'>
             {user.overallScore}%
           </ThemedText>
           <TrendIndicator trend={user.overallTrend} />

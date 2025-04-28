@@ -253,7 +253,6 @@ export const mockUsersData: UserCognitiveProfile[] = [
   {
     id: '7',
     name: 'Marta Díaz',
-    // Sin avatar
     overallScore: 89,
     overallTrend: 'stable',
     lastActive: '2023-10-25T11:20:00Z',

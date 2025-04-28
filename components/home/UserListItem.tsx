@@ -1,7 +1,7 @@
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import { Image, Pressable } from 'react-native';
-import { ThemedText } from './common/ThemedText';
+import { ThemedText } from '../common/ThemedText';
 
 interface UserListItemProps {
   id: string;

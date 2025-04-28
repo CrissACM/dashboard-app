@@ -16,7 +16,8 @@ const TrendIndicatorMini = ({ trend }: { trend: Trend }) => {
       : trend === 'declining'
       ? 'text-red-500'
       : 'text-yellow-500';
-  const icon = trend === 'improving' ? '▲' : trend === 'declining' ? '▼' : '▬'; // Simple icons
+
+  const icon = trend === 'improving' ? '▲' : trend === 'declining' ? '▼' : '▬';
   return <ThemedText className={`font-bold ${color}`}>{icon}</ThemedText>;
 };
 
@@ -37,7 +38,6 @@ export function CognitiveAreasListCard({ user }: CognitiveAreasListCardProps) {
               {area.score}
             </ThemedText>
             <TrendIndicatorMini trend={area.trend} />
-            {/* <ThemedText className="text-xs text-gray-400">{new Date(area.lastSessionDate).toLocaleDateString()}</ThemedText> */}
           </ThemedView>
         ))
       ) : (

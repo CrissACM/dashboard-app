@@ -1,5 +1,5 @@
 import { ThemedView } from '@/components/common/ThemedView';
-import { UserListItem } from '@/components/UserListItem';
+import { UserListItem } from '@/components/home/UserListItem';
 import { mockUsersData } from '@/data/mockUsers';
 import { FlatList } from 'react-native';
 

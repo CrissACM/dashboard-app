@@ -1,9 +1,7 @@
-import { UserCognitiveProfile } from '../../data/mockUsers'; // Importar el tipo
+import { UserCognitiveProfile } from '../../data/mockUsers';
 import { ThemedCard } from '../common/ThemedCard';
 import { ThemedText } from '../common/ThemedText';
 import { ThemedView } from '../common/ThemedView';
-
-// Componente auxiliar para mostrar tendencia con color
 
 interface OverallSummaryCardProps {
   user: UserCognitiveProfile;

@@ -64,10 +64,9 @@ export default function RootLayout() {
               ),
           }}
         >
-          <Stack.Screen name='home/index' options={{ title: 'User' }} />
-          <Stack.Screen name='profile/[id]' options={{ title: 'Profile' }} />
-          <Stack.Screen name='profile/data/[id]' options={{ title: 'Data' }} />
-          <Stack.Screen name='stats/index' options={{ title: 'Stats' }} />
+          <Stack.Screen name='home/index' options={{ title: 'Usuarios' }} />
+          <Stack.Screen name='profile/[id]' options={{ title: 'Perfil' }} />
+          <Stack.Screen name='profile/data/[id]' options={{ title: 'Datos' }} />
           <Stack.Screen name='+not-found' />
         </Stack>
         <StatusBar style='auto' />

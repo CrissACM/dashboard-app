@@ -4,7 +4,6 @@ import { ThemedCard } from '../common/ThemedCard';
 import { ThemedText } from '../common/ThemedText';
 import { ThemedView } from '../common/ThemedView';
 
-// Mapeo simple de ID a Nombre (puedes hacerlo más robusto)
 const areaIdToName = (id: string): string => {
   const map: { [key: string]: string } = {
     memory: 'Memoria',
@@ -26,7 +25,7 @@ export function RecommendationsCard({ user }: RecommendationsCardProps) {
   const recommendations = user.recommendedAreaIds || [];
 
   if (recommendations.length === 0) {
-    return null; // No mostrar la card si no hay recomendaciones
+    return null;
   }
 
   return (
